@@ -10,6 +10,7 @@ The following description is based on the lectures and assignment writeup provid
 
 [image1]: ./images/fig1.png
 [image2]: ./images/fig2.png
+[image_phi_ddot]: https://latex.codecogs.com/gif.latex?\ddot{\phi}&space;=&space;\frac{u_2}{I_{xx}}
 
 ## System model
 
@@ -46,7 +47,9 @@ d<sup>2</sup>*phi*/d*t*<sup>2</sup> = *u*<sub>2</sub>/*I*<sub>*xx*</sub>
 \ddot{\phi} = \frac{u_2}{I_{xx}}
 ```
 
-![](https://latex.codecogs.com/gif.latex?\ddot{\phi}&space;=&space;\frac{u_2}{I_{xx}})
+![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}&space;=&space;\frac{u_2}{I_{xx}})
+
+![alt text][image_phi_ddot]
 
 The objective is to find out the required inputs *u*<sub>1</sub> and *u*<sub>2</sub>. A PD controller (Position Controller) can be used to calculate the required d<sup>2</sup>*z*/d*t*<sup>2</sup>, denoted as d<sup>2</sup>*z<sub>c</sub>*/d*t*<sup>2</sup> for commanded acceleration, to achieve a desired trajectory *z<sub>T</sub>*. With this commanded acceleration, *u*<sub>1</sub> can be obtained. Since this PD controller depends on the position vector and its first and second derivatives, let it be denoted as PD 
 

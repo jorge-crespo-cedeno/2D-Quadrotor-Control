@@ -25,7 +25,7 @@ Gravity acts in the -**a**<sub>3</sub> direction. If **r** = [*y*  *z*]<sup>*T*<
 
 and by Euler's equation of motion,
 
-*I<sub>xx</sub>*d<sup>2</sup>*phi*/d*t* = *u*<sub>2</sub>
+*I<sub>xx</sub>*·d<sup>2</sup>*phi*/d*t*<sup>2</sup> = *u*<sub>2</sub>
 
 ## Controller
 
@@ -33,9 +33,11 @@ Since, d<sup>2</sup>*y*/d*t*<sup>2</sup> = -*u*<sub>1</sub>sin(*phi*)/*m* (Eq. 1
 
 Using first order Taylor approximations at *phi* = 0, sin(*phi*) is approximately equal to *phi*, and cos(*phi*) is approximately equal to 1. Hence, near *phi* = 0,
 
-d<sup>2</sup>*y*/d*t*<sup>2</sup> = -g*phi*
-d<sup>2</sup>*z*/d*t*<sup>2</sup> = -g + *u*<sub>1</sub>/*m*
-d<sup>2</sup>*phi*/d*t*<sup>2</sup> = *u*<sub>2</sub>/*I<sub>xx</sub>*
+d<sup>2</sup>*y*/d*t*<sup>2</sup> = -*g·phi*
+
+d<sup>2</sup>*z*/d*t*<sup>2</sup> = -*g* + *u*<sub>1</sub>/*m*
+
+d<sup>2</sup>*phi*/d*t*<sup>2</sup> = *u*<sub>2</sub>/*I*<sub>*xx*</sub>
 
 The objective is to find out the required inputs *u*<sub>1</sub> and *u*<sub>2</sub>. A PD controller (Position Controller) can be used to calculate the required d<sup>2</sup>*z*/d*t*<sup>2</sup>, denoted as d<sup>2</sup>*z<sub>c</sub>*/d*t*<sup>2</sup> for commanded acceleration, to achieve a desired trajectory *z<sub>T</sub>*. With this commanded acceleration, *u*<sub>1</sub> can be obtained. Since this PD controller depends on the position vector and its first and second derivatives, let it be denoted as PD 
 
@@ -60,6 +62,8 @@ where *k*<sub>*p,phi*</sub> and *k*<sub>*v,phi*</sub> are the proportional and d
 Finally, *u*<sub>1</sub> and *u*<sub>2</sub> can be derived as:
 
 *u*<sub>1</sub> = *mg* + *m*d<sup>2</sup>*z*<sub>*c*</sub>/d*t*<sup>2</sup>
+
 *u*<sub>2</sub> = *I*<sub>*xx*</sub>d<sup>2</sup>*phi*/d*t*<sup>2</sup>
+
 *phi*<sub>*c*</sub> = -(d<sup>2</sup>*y*<sub>*c*</sub>/d*t*<sup>2</sup>)/*g*
 

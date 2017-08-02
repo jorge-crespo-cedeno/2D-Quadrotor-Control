@@ -41,6 +41,7 @@ d<sup>2</sup>*phi*/d*t*<sup>2</sup> = *u*<sub>2</sub>/*I*<sub>*xx*</sub>
 
 ```math
 \ddot{z} = -g + \frac{u_1}{m}
+
 \ddot{\phi} = \frac{u_2}{I_{xx}}
 ```
 

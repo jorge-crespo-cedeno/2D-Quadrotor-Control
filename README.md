@@ -4,7 +4,7 @@ Requirements: MATLAB
 
 This is an exercise to implement a Proportional Derivative (PD) controller in the plane for a Quadrotor. This assigment was part of the Aerial robotics course given by the University of Pennsylvania through Coursera.
 
-In the following description, the italicized text indicates that it is textually taken from the assignment writeup provided during the course, as well as the figures.
+The following description is based on the lectures and assignment writeup provided during the course. The figures were taken from the assignment writeup.
 
 [//]: # (Image References)
 
@@ -40,6 +40,7 @@ d<sup>2</sup>*z*/d*t*<sup>2</sup> = -*g* + *u*<sub>1</sub>/*m*
 d<sup>2</sup>*phi*/d*t*<sup>2</sup> = *u*<sub>2</sub>/*I*<sub>*xx*</sub>
 
 ```math
+\ddot{z} = -g + \frac{u_1}{m}
 \ddot{\phi} = \frac{u_2}{I_{xx}}
 ```
 

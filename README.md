@@ -31,12 +31,14 @@ Gravity acts in the -**a**<sub>3</sub> direction. Let ![equation](https://latex.
 
 and by Euler's equation of motion,
 <center>![equation](https://latex.codecogs.com/gif.latex?I_{xx}\ddot{\phi}=u_{2})</center>
-where *I<sub>xx</sub>* is the inertia due to the roll motion. Since there is only motion in the YZ plane, there are no pitch or yaw motions, therefore *I<sub>yy</sub>* = *I<sub>zz</sub>* = 0.
+where *I*<sub>*xx*</sub> is the inertia due to the roll motion. Since there is only motion in the YZ plane, there are no pitch or yaw motions, therefore *I*<sub>*yy*</sub> = *I*<sub>*zz*</sub> = 0.
 
 ## Controller
 
 Since ![equation](https://latex.codecogs.com/gif.latex?m\ddot{y}=u_{1}\sin\phi) and ![equation](https://latex.codecogs.com/gif.latex?m\ddot{z}=u_{1}\cos\phi-mg), the dynamic model of the quadrotor is nonlinear. However, a PD controller is designed for a linear system. To use a linear controller for this nonlinear system, the dynamics of the quadrotor can be linearized about an equilibrium configuration ![equation](https://latex.codecogs.com/gif.latex?y=y_{0}), ![equation](https://latex.codecogs.com/gif.latex?z=z_{0}), ![equation](https://latex.codecogs.com/gif.latex?\phi=0). Using first-order Taylor approximations at this equilibrium configuration, the non-linear functions ![equation](https://latex.codecogs.com/gif.latex?\sin\phi) and ![equation](https://latex.codecogs.com/gif.latex?\cos\phi) can be approximated to ![equation](https://latex.codecogs.com/gif.latex?\phi) and 1, respectively. Hence,
-<center>![equation](https://latex.codecogs.com/gif.latex?\ddot{y}&space;=&space;-g\phi)</center>
+<center>
+![equation](https://latex.codecogs.com/gif.latex?\ddot{y}&space;=&space;-g\phi)
+</center>
 <center>![equation](https://latex.codecogs.com/gif.latex?\ddot{z}&space;=&space;-g&space;&plus;&space;\frac{u_1}{m})</center>
 <center>![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}&space;=&space;\frac{u_2}{I_{xx}})</center>
 

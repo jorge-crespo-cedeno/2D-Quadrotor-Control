@@ -27,6 +27,7 @@ The orientation of the quadrotor is defined by the angle ![equation](https://lat
 where axes **a**<sub>2</sub> and **a**<sub>3</sub> define the inertial frame, and **b**<sub>2</sub> and **b**<sub>3</sub> the body frame, which is attached to the quadrotor center of mass.  *u*<sub>1</sub> = *F*<sub>1</sub> + *F*<sub>2</sub> is the sum of each motor thrust, and *u*<sub>2</sub> = *L*(*F*<sub>1</sub> - *F*<sub>2</sub>), and *L* is the arm length of the quadrotor.
 
 Gravity acts in the -**a**<sub>3</sub> direction. Let ![equation](https://latex.codecogs.com/gif.latex?\mathbf{r}=\begin{bmatrix}&space;y&space;&&space;z&space;\end{bmatrix}^{T}) be the position vector of the quadrotor, then,
+
 ![equation](https://latex.codecogs.com/gif.latex?m\mathbf{\ddot{r}}=\begin{bmatrix}0\\-mg\end{bmatrix}&plus;\begin{bmatrix}-u_{1}\sin\phi\\u_{1}\cos\phi\end{bmatrix})
 
 and by Euler's equation of motion,
@@ -55,7 +56,9 @@ With this design decision taken, the rest is straightforward. The commanded acce
 
 where ![equation](https://latex.codecogs.com/gif.latex?\mathbf{r}_c=\begin{bmatrix}&space;y_c&space;&&space;z_c&space;\end{bmatrix}^{T}), *k<sub>p</sub>* and *k<sub>v</sub>* are the proportional and derivative gains, respectively, ![equation](https://latex.codecogs.com/gif.latex?\mathbf{e}_p=\mathbf{r}_{des}&space;-&space;\mathbf{r}), and ![equation](https://latex.codecogs.com/gif.latex?\mathbf{e}_v=\dot{\mathbf{r}}_{des}&space;-&space;\dot{\mathbf{r}}).
 
-The required angular acceleration, ![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}), can be obtained in the Position Controller, as follows,![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}=\ddot{\phi}_{c}&space;&plus;&space;k_{v,\phi}(\dot{\phi}_c-\dot{\phi}\)&space;&plus;&space;k_{p,\phi}(\phi_c-\phi\))
+The required angular acceleration, ![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}), can be obtained in the Position Controller, as follows,
+
+![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}=\ddot{\phi}_{c}&space;&plus;&space;k_{v,\phi}(\dot{\phi}_c-\dot{\phi}\)&space;&plus;&space;k_{p,\phi}(\phi_c-\phi\))
 
 where ![equation](https://latex.codecogs.com/gif.latex?k_{p,\phi}) and ![equation](https://latex.codecogs.com/gif.latex?k_{v,\phi}) are the proportional and derivative gains, respectively.
 

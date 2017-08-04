@@ -39,6 +39,7 @@ Since ![equation](https://latex.codecogs.com/gif.latex?m\ddot{y}=u_{1}\sin\phi) 
 <center>
 ![equation](https://latex.codecogs.com/gif.latex?\ddot{y}&space;=&space;-g\phi)
 </center>
+
 <center>![equation](https://latex.codecogs.com/gif.latex?\ddot{z}&space;=&space;-g&space;&plus;&space;\frac{u_1}{m})</center>
 <center>![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}&space;=&space;\frac{u_2}{I_{xx}})</center>
 

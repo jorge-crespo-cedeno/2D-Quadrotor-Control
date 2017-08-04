@@ -36,9 +36,11 @@ where *I*<sub>*xx*</sub> is the inertia due to the roll motion. Since there is o
 ## Controller
 
 Since ![equation](https://latex.codecogs.com/gif.latex?m\ddot{y}=u_{1}\sin\phi) and ![equation](https://latex.codecogs.com/gif.latex?m\ddot{z}=u_{1}\cos\phi-mg), the dynamic model of the quadrotor is nonlinear. However, a PD controller is designed for a linear system. To use a linear controller for this nonlinear system, the dynamics of the quadrotor can be linearized about an equilibrium configuration ![equation](https://latex.codecogs.com/gif.latex?y=y_{0}), ![equation](https://latex.codecogs.com/gif.latex?z=z_{0}), ![equation](https://latex.codecogs.com/gif.latex?\phi=0). Using first-order Taylor approximations at this equilibrium configuration, the non-linear functions ![equation](https://latex.codecogs.com/gif.latex?\sin\phi) and ![equation](https://latex.codecogs.com/gif.latex?\cos\phi) can be approximated to ![equation](https://latex.codecogs.com/gif.latex?\phi) and 1, respectively. Hence,
+
 ![equation](https://latex.codecogs.com/gif.latex?\ddot{y}&space;=&space;-g\phi)
 
-<center>![equation](https://latex.codecogs.com/gif.latex?\ddot{z}&space;=&space;-g&space;&plus;&space;\frac{u_1}{m})</center>
+![equation](https://latex.codecogs.com/gif.latex?\ddot{z}&space;=&space;-g&space;&plus;&space;\frac{u_1}{m})
+
 <center>![equation](https://latex.codecogs.com/gif.latex?\ddot{\phi}&space;=&space;\frac{u_2}{I_{xx}})</center>
 
 The objective is to find out the required inputs *u*<sub>1</sub> and *u*<sub>2</sub>. A PD controller (Position Controller) can be used to calculate the required ![equation](https://latex.codecogs.com/gif.latex?\ddot{z}), denoted as ![equation](https://latex.codecogs.com/gif.latex?\ddot{z}_c) for commanded acceleration, to achieve a desired trajectory ![equation](https://latex.codecogs.com/gif.latex?z_{des}). With this commanded acceleration, *u*<sub>1</sub> can be obtained.  The desired trajectory ![equation](https://latex.codecogs.com/gif.latex?\mathbf{r}_{des}=\begin{bmatrix}y_{des}&space;&&space;z_{des}\end{bmatrix}^{T}), together with its first and second derivatives, can be provided by the user or system that commands the quadrotor. The current position ![equation](https://latex.codecogs.com/gif.latex?\mathbf{r}) and velocity ![equation](https://latex.codecogs.com/gif.latex?\dot{\mathbf{r}}) can be obtained from the sensors in the quadrotor. Hence, the Position Controller has all the parameters needed to calculate *u<sub>1</sub>*.

@@ -52,7 +52,8 @@ Therefore, the Attitude Controller requires as input the output of the Position 
 
 ![alt text][image2]
 
-With this design decision taken, the rest is straightforward. The commanded acceleration vector ![equation](https://latex.codecogs.com/gif.latex?\ddot{\mathbf{r}}_{c}), can be obtained with,![equation](https://latex.codecogs.com/gif.latex?\ddot{\mathbf{r}}_{c}=\ddot{\mathbf{r}}_{des}&plus;k_{p}\mathbf{e}_{p}&plus;k_{v}\mathbf{e}_{v})
+With this design decision taken, the rest is straightforward. The commanded acceleration vector ![equation](https://latex.codecogs.com/gif.latex?\ddot{\mathbf{r}}_{c}), can be obtained with,
+![equation](https://latex.codecogs.com/gif.latex?\ddot{\mathbf{r}}_{c}=\ddot{\mathbf{r}}_{des}&plus;k_{p}\mathbf{e}_{p}&plus;k_{v}\mathbf{e}_{v})
 
 where ![equation](https://latex.codecogs.com/gif.latex?\mathbf{r}_c=\begin{bmatrix}&space;y_c&space;&&space;z_c&space;\end{bmatrix}^{T}), *k<sub>p</sub>* and *k<sub>v</sub>* are the proportional and derivative gains, respectively, ![equation](https://latex.codecogs.com/gif.latex?\mathbf{e}_p=\mathbf{r}_{des}&space;-&space;\mathbf{r}), and ![equation](https://latex.codecogs.com/gif.latex?\mathbf{e}_v=\dot{\mathbf{r}}_{des}&space;-&space;\dot{\mathbf{r}}).
 

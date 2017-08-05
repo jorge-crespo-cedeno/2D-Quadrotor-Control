@@ -28,7 +28,7 @@ where axes **a**<sub>2</sub> and **a**<sub>3</sub> define the inertial frame, an
 
 Gravity acts in the -**a**<sub>3</sub> direction. Let ![equation](https://latex.codecogs.com/gif.latex?\mathbf{r}=\begin{bmatrix}&space;y&space;&&space;z&space;\end{bmatrix}^{T}) be the position vector of the quadrotor, then,
 
-![equation](https://latex.codecogs.com/gif.latex?m\mathbf{\ddot{r}}=\begin{bmatrix}0\\-mg\end{bmatrix}&plus;\begin{bmatrix}-u_{1}\sin\phi\\u_{1}\cos\phi\end{bmatrix})
+![equation](https://latex.codecogs.com/gif.latex?m\mathbf{\ddot{r}}=\begin{bmatrix}0\\\\-mg\end{bmatrix}&plus;\begin{bmatrix}-u_{1}\sin\phi\\\\u_{1}\cos\phi\end{bmatrix})
 
 and by Euler's equation of motion,
 ![equation](https://latex.codecogs.com/gif.latex?I_{xx}\ddot{\phi}=u_{2})

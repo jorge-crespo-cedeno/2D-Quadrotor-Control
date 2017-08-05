@@ -65,7 +65,7 @@ where ![equation](https://latex.codecogs.com/gif.latex?k_{p,\phi}) and ![equatio
 
 Finally, *u*<sub>1</sub> and *u*<sub>2</sub> can be derived as:
 
-![equation](https://latex.codecogs.com/gif.latex?u_1&space;=&space;mg&space;&plus;&space;m\ddot{z})
+![equation](https://latex.codecogs.com/gif.latex?u_1&space;=&space;mg&space;&plus;&space;m\ddot{z}_c)
 
 ![equation](https://latex.codecogs.com/gif.latex?u_2&space;=&space;I_{xx}\ddot{\phi})
 

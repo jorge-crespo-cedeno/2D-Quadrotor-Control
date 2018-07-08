@@ -15,31 +15,7 @@ function [ u1, u2 ] = controller(~, state, des_state, params)
 %   controls
 
 % FILL IN YOUR CODE HERE
-ep = des_state.pos - state.pos;
-ev = des_state.vel - state.vel;
-
-Kp = 1000;
-Kd = 90;
-
-% using the same K's for y_dot and z_ddot
-r_acc = des_state.acc + Kp*ep + Kd*ev;
-
-% separate K's for y_ddot and z_ddot
-Kpy = 100;
-Kdy = 10;
-Kpz = 100;
-Kdz = 10;
-Kpphi = 1000;
-Kdphi = 90;
-y_ddot = des_state.acc(1) + Kpy*ep(1) + Kdy*ev(1);
-z_ddot = des_state.acc(2) + Kpz*ep(2) + Kdz*ev(2);
-%phi_ddot = y
-u1 = params.mass*(params.gravity + z_ddot);
-phi_c = -y_ddot / params.gravity;
-phi_dot_c = -(Kdy*(des_state.acc(1) - y_ddot) + Kpy*ev(1))/params.gravity;
-phi_ddot_c = -Kpy*(des_state.acc(1) - y_ddot)/params.gravity;
-
-u2 = params.Ixx*(phi_ddot_c + Kdphi*(phi_dot_c - state.omega) + Kpphi*(phi_c - state.rot));
+% This code is not public. If you would like to see it, please let me know.
 
 end
 
